@@ -13,14 +13,12 @@ public class BubbleSort
 		for(int i = myNums.length - 1; i >= 0; i--)
 			for(int num = 0; num < i; num++)
 			{
-				int x = myNums[num];
-				int y = myNums[num + 1];
+				int temp = myNums[num];
 
-				if(x > y)
+				if(myNums[num] > myNums[num + 1])
 				{
-					int temp = x;
-					x = y;
-					y = temp;
+					myNums[num] = myNums[num + 1];
+					myNums[num + 1] = temp;
 				}
 			}
 
